@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\RegisterController;
-use App\Http\Controllers\Api\LoginController;
+use App\Http\Controllers\Api\SessionController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -23,5 +23,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //--- Auth module
 
 Route::post('register', [RegisterController::class , 'store']);
-Route::post('login', [LoginController::class , 'store']);
-Route::post('logout', [LoginController::class , 'destroy'])->middleware('auth:sanctum');
+Route::post('login', [SessionController::class , 'store']);
+Route::post('logout', [SessionController::class , 'destroy'])->middleware('auth:sanctum');
