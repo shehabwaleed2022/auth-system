@@ -38,7 +38,7 @@ class StoreRegisterRequest extends FormRequest
             //
             'first_name' => ['string' , 'required' , 'min:3' , 'max:24'],
             'last_name' => ['string' , 'required' , 'min:3' , 'max:24'],
-            'username' => ['string' , 'required' , 'min:3' , 'max:24'],
+            'username' => ['string' ,'unique:users,username' , 'required' , 'min:3' , 'max:24'],
             'email' => ['email' , 'required' ,'unique:users,email'],
             'password' => ['required', 'confirmed' , Rules\Password::defaults()]
 

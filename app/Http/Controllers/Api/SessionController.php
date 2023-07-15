@@ -8,7 +8,7 @@ use App\Http\Requests\StoreLoginRequest;
 use Auth;
 use Illuminate\Http\Request;
 
-class LoginController extends Controller
+class SessionController extends Controller
 {
     /**
      * Display a listing of the resource.
